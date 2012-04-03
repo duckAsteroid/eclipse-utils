@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Eclipse Test fragment generator
+Bundle-SymbolicName: com.cs.eclipse.utils.test-generator
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.cs.eclipse.utils.test.generator.Activator
+Bundle-Vendor: Chris Senior
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
