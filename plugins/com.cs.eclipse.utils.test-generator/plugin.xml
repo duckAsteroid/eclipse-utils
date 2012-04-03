@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="com.cs.eclipse.utils.test-generator.projectContribution"
+            nameFilter="*"
+            objectClass="org.eclipse.core.resources.IProject">
+         <filter
+	         name="projectNature"
+	         value="org.eclipse.pde.PluginNature">
+      	 </filter>
+      	 <action
+               class="com.cs.eclipse.utils.testgenerator.popup.actions.CreateTestFragmentAction"
+               enablesFor="1"
+               id="com.cs.eclipse.utils.test-generator.createTestFragAction"
+               label="Generate Test Fragment"
+               menubarPath="additions">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="org.eclipse.pde.PDE"
+            class="com.cs.eclipse.utils.test.generator.wizards.NewTestFragmentWizard"
+            icon="icons/new-test-fragment.gif"
+            project="true"
+            finalPerspective="org.eclipse.pde.ui.PDEPerspective"
+            id="com.cs.eclipse.utils.test.generator.wizards.NewTestFragmentWizard"
+            name="Create Test Fragment">
+      </wizard>
+   </extension>
+</plugin>
