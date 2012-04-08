@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Eclipse Test fragment generator
 Bundle-SymbolicName: com.cs.eclipse.utils.test-generator;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: com.cs.eclipse.utils.test.generator.Activator
+Bundle-Activator: com.cs.eclipse.utils.test.generator.TestGeneratorPlugin
 Bundle-Vendor: Chris Senior
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
