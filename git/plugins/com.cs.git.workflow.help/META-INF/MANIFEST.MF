@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Git Workflow Help
+Bundle-SymbolicName: com.cs.git.workflow.help; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Chris Senior
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

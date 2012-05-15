@@ -1,19 +1,18 @@
 package com.cs.eclipse.utils.test.generator.wizards;
 
+import java.lang.reflect.InvocationTargetException;
+
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.SubMonitor;
+import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.jface.operation.IRunnableWithProgress;
+import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
-import org.eclipse.core.runtime.*;
-import org.eclipse.jface.operation.*;
-import java.lang.reflect.InvocationTargetException;
-import org.eclipse.jface.dialogs.MessageDialog;
-import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.core.resources.*;
-import org.eclipse.core.runtime.CoreException;
-import java.io.*;
-import org.eclipse.ui.*;
-import org.eclipse.ui.ide.IDE;
+import org.eclipse.ui.IWorkbenchWizard;
 
 /**
  * This wizard gathers information from the user about a new test fragment
@@ -79,7 +78,12 @@ public class NewTestFragmentWizard extends Wizard implements INewWizard {
 	private void doFinish(
 		IProgressMonitor monitor)
 		throws CoreException {
-		// FIXME - create new fragment
+		SubMonitor m = SubMonitor.convert(monitor);
+		m.beginTask("Creating test fragment project", 10);
+		
+		// FIXME actually generate stuff using IBundleProjectService
+		
+		m.done();
 	}
 	
 	/**

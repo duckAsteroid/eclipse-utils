@@ -147,9 +147,8 @@ public class NewFragmentDetailsPage extends WizardPage {
 	}
 
 	/**
-	 * Tests if the current workbench selection is a suitable container to use.
+	 * Extracts the plugin model from the selected project and initialises txt fields based on that 
 	 */
-
 	private void initialize() {
 		if (selection != null && selection.isEmpty() == false
 				&& selection instanceof IStructuredSelection) {
@@ -194,6 +193,8 @@ public class NewFragmentDetailsPage extends WizardPage {
 
 	private void dialogChanged() {
 		// FIXME Highlight any errors
+		
+		// does project already exist
 		updateStatus(null);
 	}
 

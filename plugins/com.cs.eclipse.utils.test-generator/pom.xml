@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.duckasteroid</groupId>
+  <artifactId>com.cs.eclipse.utils.test-generator</artifactId>
+  <version>eclipse-plugin</version>
+  
+  <contributors>
+  	<contributor>
+  		<name>Chris Senior</name>
+  		<email>duck.asteroid@btinternet.com</email>
+  		<roles>
+  			<role>admin</role>
+  		</roles>
+  	</contributor>
+  </contributors>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.javaVersion>1.6</project.build.javaVersion>
+    <tycho-version>0.14.1</tycho-version>
+  </properties>
+
+  <build>
+		<plugins>
+			<!--<plugin 
+				 This sets up the target platform in PDE terms
+				The version of Eclipse that the source will be built against 
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<resolver>p2</resolver>
+					<target>
+						<artifact>
+							<groupId>com.duckasteroid</groupId>
+							<artifactId>tycho-helper</artifactId>
+							<version>${version}</version>
+							<classifier>indigo</classifier>
+						</artifact>
+					</target>
+					<ignoreTychoRepositories>true</ignoreTychoRepositories>
+					<environments>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86</arch>
+						</environment>
+					</environments>
+				</configuration>
+			</plugin>-->
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
+	
+
+	<!-- ==================================================== -->
+	<!-- Repositories. This is where Maven looks for dependencies. The Maven 
+		repository is implicit and doesn't need to be specified. -->
+	<!-- ==================================================== -->
+	<repositories>
+		<repository>
+			<id>eclipse-public</id>
+			<name>Public Eclipse.org Nexus</name>
+			<url>http://maven.eclipse.org/nexus/content/groups/public/</url>
+		</repository>
+
+		<repository>
+			<id>eclipse-central</id>
+			<name>Central Eclipse.org Nexus</name>
+			<url>http://maven.eclipse.org/nexus/content/groups/central/</url>
+		</repository>
+
+	</repositories>
+	<name>Test Fragment Generator Plugin</name>
+</project>
